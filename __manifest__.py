@@ -4,7 +4,7 @@
 
 {
     'name': "Products Wishlist Feature",
-    'version': '13',
+    'version': '11',
     'summary': """Enabled the Wishlist feature in Ecommerce website.""",
     'description': """This module will enable the wishlist feature in website setting and record the products """,
     'author': "Agira Technologies",
