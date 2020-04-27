@@ -4,17 +4,22 @@
 
 {
     'name': "Products Wishlist Feature",
-    'version': '11',
-    'summary': """Enabled the Wishlist feature in Ecommerce website.""",
-    'description': """This module will enable the wishlist feature in website setting and record the products """,
+    'version': '10',
+    'summary': """Created the Wishlist feature in Ecommerce website.""",
+    'description': """This module will create the wishlist feature in website products sale and record the products """,
     'author': "Agira Technologies",
     'website': "https://www.agiratech.com/",
     'category': 'Website',
     'depends': [
-        'website_sale_wishlist',
+        'website_sale',
     ],
     'data': [
-        'views/product_wishlist_feature_view.xml',
+        "security/ir.model.access.csv",
+        "security/ir.rule.csv",
+        "data/ir_cron.yml",
+        "views/assets.xml",
+        "views/layout.xml",
+        "views/shop.xml",
     ],
     'license': 'AGPL-3',
     'installable': True,

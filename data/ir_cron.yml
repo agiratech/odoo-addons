@@ -1,0 +1,7 @@
+- !record {id: garbage_collector, model: ir.cron}:
+    name: Wishlisted products garbage collector
+    interval_type: weeks
+    numbercall: -1
+    model: product.wishlist
+    function: _garbage_collector
+    args: "()"
