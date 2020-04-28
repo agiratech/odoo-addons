@@ -1,4 +1,4 @@
-from odoo import api, models, tools
+from openerp import api, models, tools
 
 
 class ProductTemplate(models.Model):

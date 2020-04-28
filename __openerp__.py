@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-## Agira Technologies
-
 {
     'name': "Products Wishlist Feature",
     'version': '10',
@@ -10,10 +6,15 @@
     'author': "Agira Technologies",
     'website': "https://www.agiratech.com/",
     'category': 'Website',
-    'depends': [
-        'website_sale',
+    "application": False,
+    "installable": True,
+    "depends": [
+        "website_sale",
     ],
-    'data': [
+    "demo": [
+        "demo/assets.xml",
+    ],
+    "data": [
         "security/ir.model.access.csv",
         "security/ir.rule.csv",
         "data/ir_cron.yml",
@@ -21,7 +22,4 @@
         "views/layout.xml",
         "views/shop.xml",
     ],
-    'license': 'AGPL-3',
-    'installable': True,
-    'auto_install': False,
 }

@@ -1,5 +1,5 @@
-from odoo import api, fields, models
-from odoo.http import request
+from openerp import api, fields, models
+from openerp.http import request
 
 
 class ResUsers(models.Model):
@@ -12,7 +12,7 @@ class ResUsers(models.Model):
         """Know current session for this user."""
         try:
             sid = request.session.sid
-        except (AttributeError, RuntimeError):
+        except AttributeError:
             sid = False
         for one in self:
             one.current_session = sid
@@ -21,8 +21,5 @@ class ResUsers(models.Model):
     def check_credentials(self, password):
         """Make all this session's wishlists belong to its owner user."""
         result = super(ResUsers, self).check_credentials(password)
-        try:
-            self.env["product.wishlist"]._join_current_user_and_session()
-        except RuntimeError:
-            pass
+        self.env["product.wishlist"]._join_current_user_and_session()
         return result

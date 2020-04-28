@@ -1,5 +1,5 @@
-from odoo import api, fields, models
-from odoo.http import request, root
+from openerp import api, fields, models
+from openerp.http import request, root
 
 
 class ProductWishlist(models.Model):
