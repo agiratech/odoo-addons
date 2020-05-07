@@ -13,6 +13,9 @@
     'depends': [
         'website_sale',
     ],
+    "demo": [
+        "demo/assets.xml",
+    ],
     'data': [
         "security/ir.model.access.csv",
         "security/ir.rule.csv",
